@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div id="content">
+    {% include 'message.html' %}
+</div>
+
+<div class="box border -1">
+    <div class="lefty">
+        <h1> Relatório IR</h1>
+        <div class="card border-light mb-3" style="max-width: 18 rem;">
+            <div class="card-body">
+                <h5 class="card-title"> Relatório IR</h5>
+                <form class="card-title" method="post"  enctype="multipart/form-data"   action="{% url 'criarrelatorio' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="number" min="2021" max="3000" step="1" value="2023" name="ano">
+                        <h1></h1>
+                        <input type="file" name="excel_file" class="form-control-file">
+                    </div>
+                    <div>
+                        <a href="{% url 'modelorelatorio' %}" class="btn btn-success">Modelo</a>
+                        <button class="btn btn-success" type="submit" >Gerar Relatório</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
