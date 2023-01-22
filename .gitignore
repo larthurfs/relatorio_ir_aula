@@ -1,6 +1,4 @@
 .relatorio_ir_aula
-.env
 .idea
 *.sqlite3
-*pyc
 __pycache__
