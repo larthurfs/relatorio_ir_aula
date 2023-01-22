@@ -1,1 +1,1 @@
-web: guinicorn relatorio_ir.wsgi --log-file -
+web: gunicorn relatorio_ir.wsgi --log-file -
