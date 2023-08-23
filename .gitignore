@@ -1,0 +1,5 @@
+.relatorio_ir_aula
+.idea
+.env
+*.sqlite3
+__pycache__
